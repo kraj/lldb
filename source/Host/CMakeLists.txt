@@ -175,6 +175,10 @@ if (NOT LLDB_DISABLE_LIBEDIT)
   list(APPEND EXTRA_LIBS edit)
 endif()
 
+if (LIBXML2_FOUND)
+ list(APPEND EXTRA_LIBS xml2)
+endif ()
+
 add_lldb_library(lldbHost
   ${HOST_SOURCES}
   
